@@ -37,3 +37,23 @@ TEST(PracticeTest, is_special_char_palindrome) {
     bool actual = obj.isPalindrome("aäa");
     ASSERT_TRUE(actual);
 }
+
+TEST(PracticeTest, simple_sort) {
+    Practice obj;
+    int val1 = 1;
+    int val2 = 2;
+    int val3 = 3;
+    obj.sortDescending(val1, val2, val3);
+    ASSERT_GT(val1, val2);
+    ASSERT_GT(val2, val3);
+}
+
+TEST(PracticeTest, out_of_order_sort) {
+    Practice obj;
+    int val1 = 2;
+    int val2 = 5;
+    int val3 = 3;
+    obj.sortDescending(val1, val2, val3);
+    ASSERT_GT(val1, val2);
+    ASSERT_GT(val2, val3);
+}
