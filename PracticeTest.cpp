@@ -23,5 +23,17 @@ TEST(PracticeTest, is_simple_palindrome) {
 TEST(PracticeTest, is_not_a_palindrome) {
     Practice obj;
     bool actual = obj.isPalindrome("Ba");
+    ASSERT_FALSE(actual);
+}
+
+TEST(PracticeTest, is_long_palindrome) {
+    Practice obj;
+    bool actual = obj.isPalindrome("LONGPALINDROMEFORTESTTSETROFEMORDNILAPGNOL");
+    ASSERT_TRUE(actual);
+}
+
+TEST(PracticeTest, is_special_char_palindrome) {
+    Practice obj;
+    bool actual = obj.isPalindrome("aäa");
     ASSERT_TRUE(actual);
 }
