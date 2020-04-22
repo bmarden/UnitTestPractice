@@ -57,3 +57,13 @@ TEST(PracticeTest, out_of_order_sort) {
     ASSERT_GT(val1, val2);
     ASSERT_GT(val2, val3);
 }
+
+TEST(PracticeTest, in_order_sort) {
+    Practice obj;
+    int val1 = 3;
+    int val2 = 2;
+    int val3 = 1;
+    obj.sortDescending(val1, val2, val3);
+    ASSERT_GT(val1, val2);
+    ASSERT_GT(val2, val3);
+}
