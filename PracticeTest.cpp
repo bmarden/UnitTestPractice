@@ -44,7 +44,7 @@ TEST(PracticeTest, is_long_palindrome) {
     ASSERT_TRUE(actual);
 }
 
-TEST(PracticeTest, num_in_string) {
+TEST(PracticeTest, num_in_string_palindrome) {
     Practice obj;
     bool actual = obj.isPalindrome("is3si");
     ASSERT_TRUE(actual);
@@ -53,6 +53,12 @@ TEST(PracticeTest, num_in_string) {
 TEST(PracticeTest, is_special_char_palindrome) {
     Practice obj;
     bool actual = obj.isPalindrome("aäa");
+    ASSERT_TRUE(actual);
+}
+
+TEST(PracticeTest, ignore_spaces_palindrome) {
+    Practice obj;
+    bool actual = obj.isPalindrome("Never odd or Even");
     ASSERT_TRUE(actual);
 }
 
