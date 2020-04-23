@@ -62,7 +62,14 @@ TEST(PracticeTest, ignore_spaces_palindrome) {
     ASSERT_TRUE(actual);
 }
 
-TEST(PracticeTest, simple_sort) {
+TEST(PracticeTest, ignore_punctuation_palindrome) {
+    Practice obj;
+    bool actual = obj.isPalindrome("Doc, Note: I Dissent. A Fast Never Prevents A Fatness. I Diet On Cod.");
+    ASSERT_TRUE(actual);
+}
+
+
+TEST(PracticeTest, ascending_to_desc) {
     Practice obj;
     int val1 = 1;
     int val2 = 2;
@@ -72,7 +79,7 @@ TEST(PracticeTest, simple_sort) {
     ASSERT_GT(val2, val3);
 }
 
-TEST(PracticeTest, out_of_order_sort) {
+TEST(PracticeTest, lowhighmid_to_desc) {
     Practice obj;
     int val1 = 2;
     int val2 = 5;
@@ -80,6 +87,25 @@ TEST(PracticeTest, out_of_order_sort) {
     obj.sortDescending(val1, val2, val3);
     ASSERT_GT(val1, val2);
     ASSERT_GT(val2, val3);
+}
+
+TEST(PracticeTest, midlowhigh_to_desc) {
+    Practice obj;
+    int val1 = 3;
+    int val2 = 1;
+    int val3 = 5;
+    obj.sortDescending(val1, val2, val3);
+    ASSERT_GT(val1, val2);
+    ASSERT_GT(val2, val3);
+}
+
+TEST(PracticeTest, same_value_to_desc) {
+    Practice obj;
+    int val1 = 1;
+    int val2 = 1;
+    int val3 = 2;
+    obj.sortDescending(val1, val2, val3);
+    ASSERT_EQ(val2, val3);
 }
 
 TEST(PracticeTest, in_order_sort) {
