@@ -32,6 +32,12 @@ TEST(PracticeTest, is_not_a_palindrome) {
     ASSERT_FALSE(actual);
 }
 
+TEST(PracticeTest, ignore_capital_palindrome) {
+    Practice obj;
+    bool actual = obj.isPalindrome("AabaA");
+    ASSERT_TRUE(actual);
+}
+
 TEST(PracticeTest, is_long_palindrome) {
     Practice obj;
     bool actual = obj.isPalindrome("LONGPALINDROMEFORTESTTSETROFEMORDNILAPGNOL");
