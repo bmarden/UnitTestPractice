@@ -33,7 +33,7 @@ void Practice::sortDescending(int & first, int & second, int & third)
 bool Practice::isPalindrome(string input)
 {
   int count = 0;
-  for(int i=0; i < input.size(); i++)
+  for(size_t i=0; i < input.size(); i++)
   {
     // change lower case to upper case
     if (islower(input[i]))
@@ -48,7 +48,7 @@ bool Practice::isPalindrome(string input)
   }
   // format string for comparison
   input = input.substr(0, count);
-  for(int i=0; i < input.size()/2; i++)
+  for(size_t i=0; i < input.size()/2; i++)
   {
     if( input[i] != input[input.size()-1-i] )
       return false;
